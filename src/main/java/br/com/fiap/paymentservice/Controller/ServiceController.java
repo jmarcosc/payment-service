@@ -1,6 +1,7 @@
 package br.com.fiap.paymentservice.Controller;
 
 import br.com.fiap.paymentservice.Payment;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import java.util.*;
 @Slf4j
 @RestController
 @RequestMapping(value = "/payments", produces = "application/hal+json")
+@Api(value = "Payment", description = "payments management")
 public class ServiceController {
 
     List<Payment> payments = new ArrayList<>();
